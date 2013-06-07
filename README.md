@@ -1,4 +1,4 @@
-webOS-Bluetooth-FTP
+webOS-Bluetooth-OBEX
 ===================
 
-Bluetooth FTP (send and receive) client for webOS 2.2 (Mojo) and webOS 3.0 (Enyo).
+Bluetooth OBEX (send and receive) client for webOS 2.2 (Mojo) and webOS 3.0 (Enyo).
