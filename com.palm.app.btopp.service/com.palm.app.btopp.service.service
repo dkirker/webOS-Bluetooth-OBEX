@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=com.palm.app.btopp.service
+Exec=/usr/bin/run-js-service -n /media/cryptofs/apps/usr/palm/services/com.palm.app.btopp.service

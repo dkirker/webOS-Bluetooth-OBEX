@@ -1,0 +1,24 @@
+[
+  {
+      "type": "db.kind",
+      "object": "com.palm.btopp.receivedlist:1",
+      "caller": "com.palm.app.btopp",
+      "operations": {
+          "create": "allow",
+          "read": "allow",
+          "update": "allow",
+          "delete": "allow"
+      }
+  },
+  {
+      "type": "db.kind",
+      "object": "com.palm.btopp.receivedlist:1",
+      "caller": "ccom.palm.app.btopp.service",
+      "operations": {
+          "create": "allow",
+          "read": "allow",
+          "update": "allow",
+          "delete": "allow"
+      }
+  }
+]

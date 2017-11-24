@@ -1,0 +1,18 @@
+{
+	"description": "Bluetooth File Transfer Watcher",
+	"id": "com.palm.app.btopp.service",
+	"engine": "node",
+	"activityTimeout": 30,
+	"commandTimeout": 30,
+	"services": [ {
+		"name": "com.palm.app.btopp.service",
+		"description": "Bluetooth File Transfer Watcher",
+		"commands": [ 
+			{ 
+				"name": "handleBtActivity", 
+				"assistant": "HandleBtActivityAssistant",
+				"public": true
+			}
+		] 
+	}]
+}

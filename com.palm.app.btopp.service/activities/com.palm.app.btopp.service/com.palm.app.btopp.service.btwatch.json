@@ -1,0 +1,22 @@
+{
+	"activity": {
+		"type": {
+			"persist" : true,
+			"background" : true
+		}, 
+		"name": "btopp.btwatch",
+		"description": "Watches for Bluetooth OPP events",
+        "trigger": {
+            "method": "palm://com.palm.bluetooth/opps/subscribenotifications",
+            "params": {
+                "subscribe" : true
+            }
+        },
+		"callback":{
+			"method": "palm://com.palm.app.btopp.service/handleBtActivity",
+			"params": { }
+		}
+	},
+	"start": true,
+	"replace": true
+}

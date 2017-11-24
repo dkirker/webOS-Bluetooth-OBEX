@@ -1,0 +1,8 @@
+[
+	{ "library": { "name": "foundations", "version": "1.0" } },
+    { "library": { "name": "foundations.json", "version": "1.0" } },
+    { "library": { "name": "foundations.io", "version": "1.0" } },
+
+    { "source": "prologue.js" },
+	{ "source": "commands/handle-assistant.js" }
+]

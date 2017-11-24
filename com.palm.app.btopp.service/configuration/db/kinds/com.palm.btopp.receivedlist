@@ -1,0 +1,15 @@
+{
+	"id":"com.palm.btopp.receivedlist:1",
+	"owner":"com.palm.app.btopp",
+	"indexes":
+	[
+		{
+			"name": "getByDate",
+			"props":
+			[
+				{"name": "date"}
+			]
+		}
+	],
+	"sync": true
+}

@@ -1,0 +1,14 @@
+{
+    "title": "Transfer",
+    "type": "web",
+    "noWindow": true,
+    "main": "index.html",
+	"icon": "icon.png",
+	"splashicon": "icon-256x256.png",
+    "id": "com.palm.app.btopp",
+    "version": "0.1.0",
+    "vendor": "OpenMobl Systems",
+    "vendorurl": "http://www.openmobl.com/",
+    "removable": "true",
+    "theme": "palm-light"
+}

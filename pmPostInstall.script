@@ -1,0 +1,65 @@
+#!/bin/sh
+
+APPID="com.palm.app.btopp"
+SRVID="com.palm.app.btopp.service"
+
+APPS="/media/cryptofs/apps"
+
+APPDIR="${APPS}/usr/palm/applications/${APPID}"
+SRVDIR="${APPS}/usr/palm/services/${SRVID}"
+
+# Handle execution as pmPostInstall.script
+
+if [ ! -d ${APPS} ]; then
+	echo "Requires webOS 1.3.5 or later"
+	exit 1
+fi
+
+if [ -z "${IPKG_OFFLINE_ROOT}" ]; then
+  IPKG_OFFLINE_ROOT=/media/cryptofs/apps
+  mount -o remount,rw /
+fi
+
+# Remove the activities configuration
+
+rm -rf /etc/palm/activities/${SRVID}/
+
+# Install the activities configuration
+
+mkdir -p /etc/palm/activities/${SRVID}/
+
+cp ${SRVDIR}/activities/${SRVID}/* /etc/palm/activities/${SRVID}/
+
+# Remove the ls2 roles configuration
+
+rm -f /var/palm/ls2/roles/prv/${SRVID}.json
+rm -f /var/palm/ls2/roles/pub/${SRVID}.json
+
+# Remove the dbus service configuration
+
+rm -f /var/palm/ls2/services/prv/${SRVID}.service
+rm -f /var/palm/ls2/services/pub/${SRVID}.service
+
+# Install the ls2 roles configuration
+
+mkdir -p /var/palm/ls2/roles/prv /var/palm/ls2/roles/pub
+
+cp ${SRVDIR}/${SRVID}.json /var/palm/ls2/roles/prv/${SRVID}.json
+cp ${SRVDIR}/${SRVID}.json /var/palm/ls2/roles/pub/${SRVID}.json
+
+# Install the dbus service configuration
+
+mkdir -p /var/palm/ls2/services/prv /var/palm/ls2/services/pub
+
+cp ${SRVDIR}/${SRVID}.service /var/palm/ls2/services/prv/${SRVID}.service
+cp ${SRVDIR}/${SRVID}.service /var/palm/ls2/services/pub/${SRVID}.service
+
+# Stop the JS service if running
+
+/usr/bin/luna-send -n 1 palm://${SRVID}/__quit '{}'
+
+/usr/bin/ls-control scan-services || true
+
+exit 0
+
+

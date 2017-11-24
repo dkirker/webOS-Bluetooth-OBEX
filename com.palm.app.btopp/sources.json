@@ -1,0 +1,6 @@
+[
+    { "source": "app/assistants/app-assistant.js" },
+
+    { "scene": "main", "source": "app/assistants/main-assistant.js" },
+    { "scene": "devicepicker", "source": "app/assistants/devicepicker-assistant.js" }
+]
