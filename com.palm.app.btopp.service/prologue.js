@@ -4,7 +4,8 @@ var Json = IMPORTS["foundations.json"];
 
 var Class = Foundations.Class;
 var Future = Foundations.Control.Future;
-var MojoDB = Foundations.Data.MojoDB;
+//var MojoDB = Foundations.Data.MojoDB;
+var MojoDB = Foundations.Data.DB;
 var PalmCall = Foundations.Comms.PalmCall;
 
 if (typeof require === 'undefined') {

@@ -4,5 +4,8 @@
     { "library": { "name": "foundations.io", "version": "1.0" } },
 
     { "source": "prologue.js" },
-	{ "source": "commands/handle-assistant.js" }
+
+	{ "source": "commands/handle-assistant.js" },
+
+    { "source": "models/dbmodels.js" }
 ]

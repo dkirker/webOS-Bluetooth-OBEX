@@ -1,7 +1,7 @@
 {
 	"activity": {
 		"type": {
-			"persist" : true,
+			"persist" : false,
 			"background" : true
 		}, 
 		"name": "btopp.btwatch",
